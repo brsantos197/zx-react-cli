@@ -11,9 +11,7 @@ jobs:
 
     steps:
       - name: Configure Git Identity
-    run: |
-      git config --global user.email "${GIT_USER_EMAIL}"
-      git config --global user.name "${GIT_USER_NAME}"
+        run: git config --global user.email "${GIT_USER_EMAIL}" && git config --global user.name "${GIT_USER_NAME}"
 
       - name: Checkout code
         uses: actions/checkout@v3
