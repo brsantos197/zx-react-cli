@@ -1,7 +1,7 @@
 {
   "name": "@zx-toolkit/react-cli",
-  "version": "1.0.1",
-  "description": "react CLI",
+  "version": "1.0.0",
+  "description": "React CLI",
   "types": "build/types/types.d.ts",
   "bin": {
     "react": "bin/react"
@@ -9,7 +9,7 @@
   "scripts": {
     "clean-build": "rm -rf ./build",
     "compile": "tsc -p .",
-    "copy-templates": "copyfiles ./src/templates/* ./build/templates",
+    "copy-templates": "copyfiles ./*/templates/* ./build/templates -f",
     "build": "yarn clean-build && yarn compile && yarn copy-templates",
     "prepublishOnly": "yarn build",
     "format": "eslint \"**/*.{js,jsx,ts,tsx}\" --fix && prettier \"**/*.{js,jsx,ts,tsx,json}\" --write",
