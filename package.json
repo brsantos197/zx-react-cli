@@ -1,7 +1,7 @@
 {
   "name": "@zx-toolkit/react-cli",
   "version": "1.0.0",
-  "description": "React CLI",
+  "description": "react CLI",
   "types": "build/types/types.d.ts",
   "bin": {
     "react": "bin/react"
