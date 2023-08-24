@@ -10,6 +10,8 @@ module.exports = {
   }: GluegunToolbox) => {
     let name = parameters.first
 
+    const path = parameters.options.components.path
+
     if (!name) {
       error('Component name must be provided')
       info(`Example: react new:component <name>`)
@@ -20,10 +22,10 @@ module.exports = {
 
     await generate({
       template: 'component.tsx.ejs',
-      target: `components/${name}/index.tsx`,
+      target: `${path}/${name}/index.tsx`,
       props: { name },
     })
 
-    success(`Generated file at components/${name}/index.tsx`)
+    success(`Generated file at ${path}/${name}/index.tsx`)
   },
 }

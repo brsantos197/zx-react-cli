@@ -10,6 +10,8 @@ module.exports = {
   }: GluegunToolbox) => {
     let name = parameters.first
 
+    const path = parameters.options.pages.path
+
     if (!name) {
       error('Hook name must be provided')
       info(`Example: react new:hook <name>`)
@@ -20,10 +22,10 @@ module.exports = {
 
     await generate({
       template: 'hook.ts.ejs',
-      target: `hooks/${name}/index.tsx`,
+      target: `${path}/${name}/index.tsx`,
       props: { name },
     })
 
-    success(`Generated file at hooks/${name}/index.tsx`)
+    success(`Generated file at ${path}/${name}/index.tsx`)
   },
 }

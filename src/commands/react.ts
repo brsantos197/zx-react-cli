@@ -1,12 +1,12 @@
-import { readFileSync } from 'fs'
 import { GluegunCommand } from 'gluegun'
 
 const command: GluegunCommand = {
   name: 'react',
+  hidden: true,
   run: async (toolbox) => {
-    const { print, parameters } = toolbox
-
-    print.info(parameters.options)
+    const { system, print } = toolbox
+    const result = await system.run('react -h')
+    print.info(result)
   },
 }
 
