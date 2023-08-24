@@ -36,7 +36,7 @@ jobs:
           git diff --stat
 
           # Commit changes to package.json
-          git add package.json
+          git add .
           git commit -m "Bump version in package.json CI/CD"
 
       - name: Push changes
