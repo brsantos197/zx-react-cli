@@ -4,12 +4,13 @@ Welcome to the ZX React CLI repository! This tool is designed to facilitate Reac
 
 ## Key Features
 
-| Functionality            | Command                                 | Description                                                                                               |
-| ------------------------ | --------------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| Initialize configuration | `npx react init`                        | Fenerate a default ZX React CLI settings file in your project called react.config.json.                   |
-| Component Generation     | `npx react new:component ComponentName` | Generates a new reusable component with a basic structure.                                                |
-| Page Generation          | `npx react new:page PageName`           | Quickly generates complete pages files, aiding in page development.                                       |
-| Hook Generation          | `npx react new:hook HookName`           | Swiftly creates standardized custom hooks for efficient state management and logic in React applications. |
+| Functionality | Command | Description |
+|-|-|-|
+| Initialize configuration   | `npx react init` | Fenerate a default ZX React CLI settings file in your project called react.config.json. |
+| Component Generation   | `npx react new:component ComponentName` | Generates a new reusable component with a basic structure.        |
+| Page Generation        | `npx react new:page PageName`       | Quickly generates complete pages files, aiding in page development. |
+| Hook Generation        | `npx react new:hook HookName`       | Swiftly creates standardized custom hooks for efficient state management and logic in React applications.     |
+
 
 ## How to Use
 
@@ -18,7 +19,7 @@ Welcome to the ZX React CLI repository! This tool is designed to facilitate Reac
 
     `npm i @zx-toolkit/react-cli`
 
-3.  Run the init command to create the default settings file in your React project
+3. Run the init command to create the default settings file in your React project
 
     `npx react init`
 
