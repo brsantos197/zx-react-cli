@@ -6,7 +6,7 @@ const command: GluegunCommand = {
     const { print, prompt } = toolbox
 
     const package_json = toolbox.filesystem.read('package.json', 'json')
-    if (!package_json.dependencies['react']) {
+    if (!package_json || !package_json.dependencies['react']) {
       print.error('This directory is not a react project')
       return
     }
