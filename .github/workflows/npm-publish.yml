@@ -38,6 +38,7 @@ jobs:
           # Commit changes to package.json
           git add package.json
           git commit -m "Bump version in package.json CI/CD"
+          git push
 
       - name: Publish to npm
         run: npm publish --access public
