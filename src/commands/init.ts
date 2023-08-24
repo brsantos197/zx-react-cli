@@ -34,13 +34,13 @@ const command: GluegunCommand = {
 
     const data = {
       components: {
-        path: 'components/',
+        path: 'src/components/',
       },
       pages: {
-        path: 'pages/',
+        path: 'src/pages/',
       },
       hooks: {
-        path: 'hooks/',
+        path: 'src/hooks/',
       },
     }
 
