@@ -22,10 +22,10 @@ module.exports = {
 
     await generate({
       template: 'hook.ts.ejs',
-      target: `${path}/${name}/index.tsx`,
+      target: `${path}/use${name}.ts`,
       props: { name },
     })
 
-    success(`Generated file at ${path}/${name}/index.tsx`)
+    success(`Generated file at ${path}/use${name}.ts`)
   },
 }
