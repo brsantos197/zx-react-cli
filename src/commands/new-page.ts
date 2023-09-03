@@ -10,7 +10,7 @@ module.exports = {
   }: GluegunToolbox) => {
     const name = parameters.first
 
-    const path = parameters.options.hooks.path
+    const path = parameters.options.pages.path
 
     if (!name) {
       error('Page Component name must be provided')

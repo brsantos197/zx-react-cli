@@ -10,7 +10,7 @@ module.exports = {
   }: GluegunToolbox) => {
     let name = parameters.first
 
-    const path = parameters.options.pages.path
+    const path = parameters.options.hooks.path
 
     if (!name) {
       error('Hook name must be provided')
