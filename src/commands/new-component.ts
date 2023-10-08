@@ -8,7 +8,7 @@ module.exports = {
     template: { generate },
     print: { info, error, success },
   }: GluegunToolbox) => {
-    let name = parameters.first
+    const name = parameters.first
 
     const path = parameters.options.components.path
 
@@ -18,12 +18,14 @@ module.exports = {
       return
     }
 
-    name = strings.pascalCase(name)
+    const lastName = strings.pascalCase(
+      name.split('/')[name.split('/').length - 1]
+    )
 
     await generate({
       template: 'component.tsx.ejs',
       target: `${path}/${name}/index.tsx`,
-      props: { name },
+      props: { name: lastName },
     })
 
     success(`Generated file at ${path}/${name}/index.tsx`)

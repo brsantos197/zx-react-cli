@@ -1,4 +1,4 @@
-import { GluegunToolbox } from 'gluegun'
+import { GluegunToolbox, strings } from 'gluegun'
 
 module.exports = {
   name: 'new:page',
@@ -12,6 +12,10 @@ module.exports = {
 
     const path = parameters.options.pages.path
 
+    const lastName = strings.pascalCase(
+      name.split('/')[name.split('/').length - 1]
+    )
+
     if (!name) {
       error('Page Component name must be provided')
       info(`Example: react new:page <name>`)
@@ -21,7 +25,7 @@ module.exports = {
     await generate({
       template: 'page.tsx.ejs',
       target: `${path}/${name}/index.tsx`,
-      props: { name },
+      props: { name: lastName },
     })
 
     success(`Generated file at ${path}/${name}/index.tsx`)
